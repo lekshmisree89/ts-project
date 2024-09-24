@@ -3,18 +3,53 @@ import Driveable from '../interfaces/Driveable.js';
 
 // Vehicle class that implements Driveable interface
 class Vehicle implements Driveable {
+
+  
+
   // Declare properties of the Vehicle class
-  started: boolean;
-  currentSpeed: number;
+  protected vin: string;      // Vehicle Identification Number
+  protected color: string;     // Color of the vehicle
+  protected make: string;      // Manufacturer of the vehicle
+  protected model: string;     // Model of the vehicle
+  protected year: number;      // Manufacturing year
+  protected weight: number;     // Weight of the vehicle
+  protected topSpeed: number;  // Top speed of the vehicle
+  public started: boolean;     // Whether the vehicle is started
+  public currentSpeed: number; // Current speed of the vehicle
 
   // Constructor for the Vehicle class
-  constructor() {
+   // Constructor for the Vehicle class
+   
+  
+  
+  constructor(vin: string, color: string, make: string, model: string, year: number, weight: number, topSpeed: number) {
+    this.vin = vin;
+    this.color = color;
+    this.make = make;
+    this.model = model;
+    this.year = year;
+    this.weight = weight;
+    this.topSpeed = topSpeed;
+    this.started = false;
+    this.currentSpeed = 0;
     this.started = false;
     this.currentSpeed = 0;
   }
 
   // Method to print vehicle details
   printDetails(): void {
+    console.log(`VIN: ${this.vin}`);
+    console.log(`Color: ${this.color}`);
+    console.log(`Make: ${this.make}`);
+    console.log(`Model: ${this.model}`);
+    console.log(`Year: ${this.year}`);
+    console.log(`Weight: ${this.weight} lbs`);
+    console.log(`Top Speed: ${this.topSpeed} mph`);
+    console.log(`Vehicle started: ${this.started}`);
+    console.log(`Vehicle current speed: ${this.currentSpeed} mph`);
+  
+
+  
     console.log(`Vehicle started: ${this.started}`);
     console.log(`Vehicle current speed: ${this.currentSpeed} mph`);
   }
