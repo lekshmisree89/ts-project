@@ -7,15 +7,14 @@ class Vehicle implements Driveable {
   
 
   // Declare properties of the Vehicle class
-  protected vin: string;      // Vehicle Identification Number
-  protected color: string;     // Color of the vehicle
-  protected make: string;      // Manufacturer of the vehicle
-  protected model: string;     // Model of the vehicle
-  protected year: number;      // Manufacturing year
-  protected weight: number;     // Weight of the vehicle
-  protected topSpeed: number;  // Top speed of the vehicle
-  public started: boolean;     // Whether the vehicle is started
-  public currentSpeed: number; // Current speed of the vehicle
+  vin: string;      // Vehicle Identification Number
+   color: string;     // Color of the vehicle
+  make: string;      // Manufacturer of the vehicle
+ model: string;     // Model of the vehicle
+year: number;      // Manufacturing year
+weight: number;     // Weight of the vehicle
+ started: boolean;     // Whether the vehicle is started
+ currentSpeed: number; // Current speed of the vehicle
 
   // Constructor for the Vehicle class
    // Constructor for the Vehicle class
@@ -29,7 +28,6 @@ class Vehicle implements Driveable {
     this.model = model;
     this.year = year;
     this.weight = weight;
-    this.topSpeed = topSpeed;
     this.started = false;
     this.currentSpeed = 0;
     this.started = false;
@@ -44,7 +42,6 @@ class Vehicle implements Driveable {
     console.log(`Model: ${this.model}`);
     console.log(`Year: ${this.year}`);
     console.log(`Weight: ${this.weight} lbs`);
-    console.log(`Top Speed: ${this.topSpeed} mph`);
     console.log(`Vehicle started: ${this.started}`);
     console.log(`Vehicle current speed: ${this.currentSpeed} mph`);
   
