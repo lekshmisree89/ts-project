@@ -32,7 +32,8 @@ private towingCapacity: number;
     towingCapacity: number
   ) {
     // Call the parent class (Vehicle) constructor
-    super();
+    super(vin, color, make, model, year, weight, topSpeed);
+  
 {
     // Initialize Truck-specific properties
     this.vin = vin;
