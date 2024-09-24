@@ -1,26 +1,26 @@
 // import Driveable interface
-import Driveable from '../interfaces/Driveable.js';
+import Driveable from '../interfaces/Driveable';
 
 // Vehicle class that implements Driveable interface
 class Vehicle implements Driveable {
 
-  
+
 
   // Declare properties of the Vehicle class
   vin: string;      // Vehicle Identification Number
-   color: string;     // Color of the vehicle
+  color: string;     // Color of the vehicle
   make: string;      // Manufacturer of the vehicle
- model: string;     // Model of the vehicle
-year: number;      // Manufacturing year
-weight: number;     // Weight of the vehicle
- started: boolean;     // Whether the vehicle is started
- currentSpeed: number; // Current speed of the vehicle
+  model: string;     // Model of the vehicle
+  year: number;      // Manufacturing year
+  weight: number;     // Weight of the vehicle
+  started: boolean;     // Whether the vehicle is started
+  currentSpeed: number; // Current speed of the vehicle
 
   // Constructor for the Vehicle class
-   // Constructor for the Vehicle class
-   
-  
-  
+  // Constructor for the Vehicle class
+
+
+
   constructor(vin: string, color: string, make: string, model: string, year: number, weight: number, topSpeed: number) {
     this.vin = vin;
     this.color = color;
@@ -44,9 +44,9 @@ weight: number;     // Weight of the vehicle
     console.log(`Weight: ${this.weight} lbs`);
     console.log(`Vehicle started: ${this.started}`);
     console.log(`Vehicle current speed: ${this.currentSpeed} mph`);
-  
 
-  
+
+
     console.log(`Vehicle started: ${this.started}`);
     console.log(`Vehicle current speed: ${this.currentSpeed} mph`);
   }
