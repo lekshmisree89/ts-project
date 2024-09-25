@@ -1,9 +1,9 @@
 // import the Vehicle, Motorbike, Car, Wheel, and AbleToTow classes/interfaces
-import Vehicle from './Vehicle';
-import Motorbike from './Motorbike';
-import Car from './Car';
-import Wheel from './Wheel';
-import AbleToTow from '../interfaces/AbleToTow';
+import Vehicle from './Vehicle.js';
+import Motorbike from './Motorbike.js';
+import Car from './Car.js';
+import Wheel from './Wheel.js';
+import AbleToTow from '../interfaces/AbleToTow.js';
 
 // TODO: The Truck class should extend the Vehicle class and should implement the AbleToTow interface
 
@@ -38,7 +38,7 @@ class Truck extends Vehicle implements AbleToTow {
 
     // Check if the wheels array has 4 elements; if not, create 4 new default Wheel objects
     this.wheels = wheels.length === 4 ? wheels : [new Wheel(), new Wheel(), new Wheel(), new Wheel()];
-    
+
     this.towingCapacity = towingCapacity;
     this.vin = vin;
     this.color = color;
