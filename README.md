@@ -53,5 +53,6 @@ Screenshot for the command line
 ![command line application](image.png)
 
 LINK TO GIT REPO
+https://github.com/lekshmisree89/ts-project
 
 LINK TO THE WALK THROUGH VIDEO
