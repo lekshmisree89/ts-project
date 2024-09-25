@@ -200,11 +200,11 @@ class Cli {
           answers.wheels,
           parseInt(answers.towingCapacity),
         );
-        // push the car to the vehicles array
+        // push the truck to the vehicles array
         this.vehicles.push(truck);
          // TODO: set the selectedVehicleVin to the vin of the truck
         this.selectedVehicleVin = truck.vin;
-        // perform actions on the car
+        // perform actions on the truck
         this.performActions();
       });
 
