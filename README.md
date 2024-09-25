@@ -55,4 +55,5 @@ Screenshot for the command line
 LINK TO GIT REPO
 https://github.com/lekshmisree89/ts-project
 
-LINK TO THE WALK THROUGH VIDEO
+LINK TO THE WALK THROUGH VIDEO:https://app.screencastify.com/v3/watch/CQs8SHuskjZCFqweBxM4
+
