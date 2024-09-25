@@ -5,6 +5,8 @@ import { CustomVehicles } from "..";
 import Truck from "./Truck.js";
 import Wheel from './Wheel';
 import Motorbike from "./Motorbike.js";
+import Vehicle from "./Vehicle.js";
+import AbleToTow from '../interfaces/AbleToTow';
 
 // define the Cli class
 class Cli {
@@ -300,7 +302,7 @@ class Cli {
 
   // method to find a vehicle to tow
   // TODO: add a parameter to accept a truck object
-  findVehicleToTow(): void {
+  findVehicleToTow(truck:Vehicle): void {
     inquirer
       .prompt([
         {
@@ -316,8 +318,22 @@ class Cli {
         },
       ])
       .then((answers) => {
+        const selectedVehicle = answers.vehicleToTow;
+        // TODO: check if the selected vehicle is the truck/
+        if (selectedVehicle.vin === truck.vin) {
+          console.log("The truck cannot tow itself. Please select another vehicle.");
         
-        // TODO: check if the selected vehicle is the truck
+        // Perform actions on the truck to allow the user to select another action
+        this.performActions();
+      } else {
+        console.log(`Towing vehicle: ${selectedVehicle.vin} -- ${selectedVehicle.make} ${selectedVehicle.model}`);
+        
+        // Logic to tow the selected vehicle
+        this.findVehicleToTow(selectedVehicle);
+
+        // Perform actions on the truck after towing the vehicle
+        this.performActions();
+      }
         // TODO: if it is, log that the truck cannot tow itself then perform actions on the truck to allow the user to select another action
         // TODO: if it is not, tow the selected vehicle then perform actions on the truck to allow the user to select another action
       });
