@@ -183,7 +183,6 @@ class Cli {
       .then((answers) => {
         // TODO: Use the answers object to pass the required properties to the Truck constructor
         // TODO: push the truck to the vehicles array
-       
         // TODO: perform actions on the truck
 
 
@@ -262,6 +261,12 @@ class Cli {
           type: 'input',
           name: 'rearWheelBrand',
           message: 'Enter Rear Wheel Brand',
+        },
+          {
+            type: 'input',
+            name: 'wheels',
+            message: 'Enter number of wheels',
+          
         },
       ])
       .then((answers) => {
